@@ -1,25 +1,33 @@
 ## About GGDAO.sol
 This smart contract does this.
-1. When contract is deployed to the blockchain, it first mints NFT for HRDAO.
-2. Owner of the smart contract can change the account where donating money is deposited.
+1. When contract is deployed to the blockchain, it first mints NFT for HRDAO(exactly to the treasury wallet).
+2. Owner of the smart contract can change the treasury wallet account.
 3. Only owner can transfer ownership to the other acount.
-4. Has struct called 'NFTMeta' as metadata for minted nfts. When minting, issuance number and level of donation is added to the struct array nftMetas.
+4. Has 6 metadatas on pinata for individual UDHRNFTs.(All metadata is stored in metadatas.zip)
 5. Unlimited minting is possible.
-6. 'tokenURI' is stored, so that indicates Metadata uploaded on IPFS, pinata.
-7. When minting, money sent on message is deposited into DAO account.
+6. `tokenURI` is stored, so that indicates Metadata uploaded on IPFS, pinata.
+7. When minting, money sent on message is deposited into treasuary account.
 8. According to the amount of donation, level of donation is awarded to each NFT.
+9. Metadata contains 
+   - `DonorLevel(change maker, champion, peacekeeper, visionary, guardian, luminary)`,
+   - `Issuance Number(tokenId + 1)`,
+   - `Symbol: UDHRNFT`,
+   - `Name: The UDHR NFT`
 
-   # KEYs used to test.
-    DEPLOYER_PRIVATE_KEY="81ebdc9308eec8c5cd3884e3c16728f6601f3f09046dd8b26db61de0d5709abf"
-    SMART_CONTRACT_ADDRESS = "0x4D7627DB302978F13004d449b80C4aE81E9c165C"
-    IPFS Image Address = "https://gateway.pinata.cloud/ipfs/QmdnvNL84wWcBUrFVjSAKGsKqZ5yFFyp5RQRxYZEHzfq7d"
-    
+## Address/Key used for smart contract.
+ 1. `TREASURY_WALLET = 0x69E796DF6D3Ddf048750754D663b9d3384370296`
+ 2. `IPFS Image Address = "https://gateway.pinata.cloud/ipfs/QmQTVLajzcysdEhqLEMtjfbQootQKwHVj3SBoUfDd7JCJ3"`
+ 3. `API_KEY = "https://mainnet.infura.io/v3/f38eb21f5ad14270bf477f6f9ce80f53"`
 
-## Steps
-  1. compile 'npx hardhat compile'
-  2. deploy compiled smart contract, here is 'GGDAO.json'. 
-    Run 'npx hardhat run scripts/deploy.js --network ropsten'.
-  3. edit root directory/nft-metadata.json and upload it on the IPFS.
-    Then, get URI of .json file on IPFS.
-  4. call mintNft in web3 with parameter "tokenURI".
-
+## How to compile and deploy/test smart contract
+1. Run `npm install`
+2. Edit `.env`. If `.env` does not exists, then create new one and then write following code into it.
+   - `PRIVATE_KEY = <Your wallet private key>`
+   - `API_KEY` = `<https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}>`
+3. Run `npx hardhat run --network mainnet scripts/deploy.js`.
+   Using hardhat, it automatically compiles before running scripts.
+4. For the test purpose, run
+   - `npx hardhat node`
+   - `npx hardhat run --network localhost scripts/deploy.js`.
+   - You can interact with this test smart contract in another terminal using scripts.
+   
