@@ -29,7 +29,7 @@ contract GGDAO is ERC721URIStorage, Ownable{
     using Counters for Counters.Counter;
     Counters.Counter private tokenId;
 
-    address TREASURY_WALLET = 0x8408bCBA92b282e75267ce5eA82774d6382103C4;
+    address TREASURY_WALLET = 0x69E796DF6D3Ddf048750754D663b9d3384370296;
 
     event NewTokenMinted (
         address indexed newTokenOwner,

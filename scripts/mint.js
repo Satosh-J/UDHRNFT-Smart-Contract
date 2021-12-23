@@ -1,11 +1,13 @@
 const hre = require("hardhat");
 async function main() {
     /**
-     * in this example, we impersonate account address as "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199".
+     * in this example, we impersonate 
+     * account address as "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199".
+     * contract address as "0x720472c8ce72c2A2D711333e064ABD3E6BbEAdd3"
+     * You can get contract address when deploying smart contract.
      */
     const ACCOUNT_ADDRESS = "0x8626f6940e2eb28930efb4cef49b2d1f2c9c1199";
     const CONTRACT_ADDRESS = "0x720472c8ce72c2A2D711333e064ABD3E6BbEAdd3";
-    // const CONTRACT_ADDRESS = "0x4c2f7092c2ae51d986befee378e50bd4db99c901"
     
     const signer = await ethers.getSigner(ACCOUNT_ADDRESS);
     

@@ -35,16 +35,19 @@ module.exports = {
       hardhat: {
             forking: {
               url: "https://eth-mainnet.alchemyapi.io/v2/Jef93sYTgg4kTBkbwlxNEr5oAq-fVnaR",
-              // blockNumber: 13775411,
-          },
-         //  accounts: [`0x7c852118294e51e653712a81e05800f419141751be58f605c371e15141b007a6`]
+         //   blockNumber: 13775411,
 
+              /**
+               * blockNumber: an optional number to pin which block to fork from.
+               * If no value is provided, the latest block is used.
+               */
+          },
       },
-      // mainnet: {
-      //    url: API_URL,
-      //    accounts: [`0x${PRIVATE_KEY}`],
-      //    timeout: 200000
-      // },
+      mainnet: {
+         url: API_URL,
+         accounts: [`0x${PRIVATE_KEY}`],
+         timeout: 40000
+      },
       ropsten: {
          url: API_URL,
          accounts: [`0x${ROP_PRIVATE_KEY}`],
@@ -54,11 +57,5 @@ module.exports = {
          accounts: [`0x${POLYGON_PRIVATE_KEY}`],
          timeout: 40000
       }
-   },
-   settings: {
-      optimizer: {
-        enabled: true,
-        runs: 1000,
-      },
    }
 }
