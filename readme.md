@@ -9,10 +9,10 @@ This smart contract does this.
 7. When minting, money sent on message is deposited into treasuary account.
 8. According to the amount of donation, level of donation is awarded to each NFT.
 9. Metadata contains 
-   `DonorLevel(change maker, champion, peacekeeper, visionary, guardian, luminary)`,
-   `Issuance Number(tokenId + 1)`,
-   `Symbol: UDHRNFT`,
-   `Name: The UDHR NFT`
+   - `DonorLevel(change maker, champion, peacekeeper, visionary, guardian, luminary)`,
+   - `Issuance Number(tokenId + 1)`,
+   - `Symbol: UDHRNFT`,
+   - `Name: The UDHR NFT`
 
 ## Address/Key used for smart contract.
  1. `TREASURY_WALLET = 0x69E796DF6D3Ddf048750754D663b9d3384370296`
