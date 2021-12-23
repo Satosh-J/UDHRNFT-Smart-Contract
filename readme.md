@@ -21,7 +21,7 @@ This smart contract does this.
 
 ## How to compile and deploy/test smart contract
 1. Run `npm install`
-2. Edit `.env`  
+2. Edit `.env`. If `.env` does not exists, then create new one and then write following code into it.
    - `PRIVATE_KEY = <Your wallet private key>`
    - `API_KEY` = `<https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}>`
 3. Run `npx hardhat run --network mainnet scripts/deploy.js`.
