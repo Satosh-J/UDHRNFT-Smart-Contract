@@ -15,19 +15,19 @@ This smart contract does this.
    `Name: The UDHR NFT`
 
 ## Address/Key used for smart contract.
- `TREASURY_WALLET = 0x69E796DF6D3Ddf048750754D663b9d3384370296`
- `IPFS Image Address = "https://gateway.pinata.cloud/ipfs/QmQTVLajzcysdEhqLEMtjfbQootQKwHVj3SBoUfDd7JCJ3"`
- `API_KEY = "https://mainnet.infura.io/v3/f38eb21f5ad14270bf477f6f9ce80f53"`
+ 1. `TREASURY_WALLET = 0x69E796DF6D3Ddf048750754D663b9d3384370296`
+ 2. `IPFS Image Address = "https://gateway.pinata.cloud/ipfs/QmQTVLajzcysdEhqLEMtjfbQootQKwHVj3SBoUfDd7JCJ3"`
+ 3. `API_KEY = "https://mainnet.infura.io/v3/f38eb21f5ad14270bf477f6f9ce80f53"`
 
 ## How to compile and deploy/test smart contract
 1. Run `npm install`
 2. Edit `.env`  
-   `PRIVATE_KEY = <Your wallet private key>`
-   `API_KEY` = `<https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}>`
+   - `PRIVATE_KEY = <Your wallet private key>`
+   - `API_KEY` = `<https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}>`
 3. Run `npx hardhat run --network mainnet scripts/deploy.js`.
    Using hardhat, it automatically compiles before running scripts.
 4. For the test purpose, run
-   `npx hardhat node`
-   `npx hardhat run --network localhost scripts/deploy.js`.
-   You can interact with this test smart contract in another terminal using scripts.
+   - `npx hardhat node`
+   - `npx hardhat run --network localhost scripts/deploy.js`.
+   - You can interact with this test smart contract in another terminal using scripts.
    
